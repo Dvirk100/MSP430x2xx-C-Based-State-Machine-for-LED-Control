@@ -6,8 +6,11 @@ The FSM design allows for modularity and efficient handling of user input from f
 
 # Features
 • State 1 (PB0): Displays a pre-defined student ID number on the LED array sequentially with a 0.5-second delay between digits (uninterruptible).
+
 • State 2 (PB1): Sequentially illuminates LEDs from right to left with a 0.5-second delay for 7 seconds (uninterruptible).
+
 • State 3 (PB2): Generates a high-resolution PWM signal at a specified frequency (kHz) and 75% duty cycle on a designated pin.
+
 • State 4 (Idle): Turns off LEDs and enters sleep mode (interruptible).
 
 # Conclusion 
