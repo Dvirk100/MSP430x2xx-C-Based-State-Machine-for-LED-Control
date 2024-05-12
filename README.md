@@ -21,11 +21,11 @@ state1 to state4: Represent operational modes such as reading inputs, adjusting 
 
 Transitions between states are triggered by events or conditions, ensuring predictable and responsive system behavior.
 
-# FSM States and Operations
+# Interrupt Handling
 
 Interrupts are managed efficiently to ensure that urgent hardware events are addressed promptly without significant delay, enhancing the system's real-time capabilities.
 
-# FSM States and Operations
+# Project Structure
 
 api.h & api.c: Define interface functions for hardware interaction.
 
