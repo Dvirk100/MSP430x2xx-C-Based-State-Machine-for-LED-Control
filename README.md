@@ -1,18 +1,44 @@
-# MSP430x2xx-Embedded-C-State-Machine-Driven-LED-Control-and-Display
+# MSP430x2xx: C-Based State Machine for LED Control
 
-This project implements an embedded C program for the Texas Instruments MSP430x2xx microcontroller family using a finite state machine (FSM) architecture to control and display LEDs.
-
-The FSM design allows for modularity and efficient handling of user input from four pushbuttons to execute different LED operations.
+Welcome to my GitHub repository showcasing an embedded system programmed in C, centered around a finite state machine (FSM). This project is designed specifically for MSP430x2xx microcontrollers and focuses on controlling LEDs through state-driven logic to demonstrate efficient and modular code architecture.
 
 # Features
-• State 1 (PB0): Displays a pre-defined student ID number on the LED array sequentially with a 0.5-second delay between digits (uninterruptible).
+Modular Design: Organized into layers - Application (APP), Board Support Package (BSP), Hardware Abstraction Layer (HAL), and Application Programming Interface (API).
+Finite State Machine (FSM): Manages system states and transitions to handle various operational modes effectively.
+LED Control: Uses GPIOs to manipulate LEDs based on system state, demonstrating direct hardware control in a low-level embedded environment.
+Low Power Management: Implements various system modes for power optimization, essential for embedded applications.
 
-• State 2 (PB1): Sequentially illuminates LEDs from right to left with a 0.5-second delay for 7 seconds (uninterruptible).
+# FSM States and Operations
+ 
+This project employs an FSM with several states, each designed for specific roles:
 
-• State 3 (PB2): Generates a high-resolution PWM signal at a specified frequency (kHz) and 75% duty cycle on a designated pin.
+state0 (Idle State): The default state after reset where the system awaits user input or an event to transition.
+state1 to state4: Represent operational modes such as reading inputs, adjusting settings, managing outputs, and handling system alerts or errors.
+Transitions between states are triggered by events or conditions, ensuring predictable and responsive system behavior.
 
-• State 4 (Idle): Turns off LEDs and enters sleep mode (interruptible).
+# FSM States and Operations
 
-# Conclusion 
-This embedded C project demonstrates the successful implementation of a finite state machine (FSM) to control LED behavior on the MSP430x2xx microcontroller. It showcases user input handling, modular code structure, and basic PWM generation.
-Feel free to explore the code, experiment with different functionalities, and consider potential extensions like additional button actions, more complex LED patterns, or communication with external sensors.
+Interrupts are managed efficiently to ensure that urgent hardware events are addressed promptly without significant delay, enhancing the system's real-time capabilities.
+
+# FSM States and Operations
+
+api.h & api.c: Define interface functions for hardware interaction.
+app.h: Declares FSM states and system modes.
+bsp.h & bsp.c: Hardware-specific configurations for the MSP430x2xx.
+halGPIO.h & halGPIO.c: Interface functions for direct GPIO manipulation.
+main.c: The main executable with initial system setup and operational loop.
+
+# Getting Started
+
+To run and modify this project:
+
+1. Set up your MSP430 development environment.
+2. Clone this repository.
+3. Navigate to the project directory.
+4. Compile the code using an MSP430 compiler like MSPGCC.
+5. Flash the compiled binary to your MSP430 device.
+
+
+
+
+
