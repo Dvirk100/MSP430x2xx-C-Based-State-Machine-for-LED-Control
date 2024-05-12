@@ -4,8 +4,11 @@ Welcome to my GitHub repository showcasing an embedded system programmed in C, c
 
 # Features
 Modular Design: Organized into layers - Application (APP), Board Support Package (BSP), Hardware Abstraction Layer (HAL), and Application Programming Interface (API).
+
 Finite State Machine (FSM): Manages system states and transitions to handle various operational modes effectively.
+
 LED Control: Uses GPIOs to manipulate LEDs based on system state, demonstrating direct hardware control in a low-level embedded environment.
+
 Low Power Management: Implements various system modes for power optimization, essential for embedded applications.
 
 # FSM States and Operations
@@ -13,7 +16,9 @@ Low Power Management: Implements various system modes for power optimization, es
 This project employs an FSM with several states, each designed for specific roles:
 
 state0 (Idle State): The default state after reset where the system awaits user input or an event to transition.
+
 state1 to state4: Represent operational modes such as reading inputs, adjusting settings, managing outputs, and handling system alerts or errors.
+
 Transitions between states are triggered by events or conditions, ensuring predictable and responsive system behavior.
 
 # FSM States and Operations
@@ -23,9 +28,13 @@ Interrupts are managed efficiently to ensure that urgent hardware events are add
 # FSM States and Operations
 
 api.h & api.c: Define interface functions for hardware interaction.
+
 app.h: Declares FSM states and system modes.
+
 bsp.h & bsp.c: Hardware-specific configurations for the MSP430x2xx.
+
 halGPIO.h & halGPIO.c: Interface functions for direct GPIO manipulation.
+
 main.c: The main executable with initial system setup and operational loop.
 
 # Getting Started
