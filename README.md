@@ -14,4 +14,5 @@ The FSM design allows for modularity and efficient handling of user input from f
 • State 4 (Idle): Turns off LEDs and enters sleep mode (interruptible).
 
 # Conclusion 
-This embedded C project demonstrates the successful implementation of a finite state machine (FSM) to control LED behavior on the MSP430x2xx microcontroller. It showcases user input handling, modular code structure, and basic PWM generation. Feel free to explore the code, experiment with different functionalities, and consider potential extensions like additional button actions, more complex LED patterns, or communication with external sensors.
+This embedded C project demonstrates the successful implementation of a finite state machine (FSM) to control LED behavior on the MSP430x2xx microcontroller. It showcases user input handling, modular code structure, and basic PWM generation.
+Feel free to explore the code, experiment with different functionalities, and consider potential extensions like additional button actions, more complex LED patterns, or communication with external sensors.
